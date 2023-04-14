@@ -19,7 +19,7 @@ pipeline {
         stage('init'){
             steps{
                 script{
-                    sh 'touch script.groovy'
+                    writeFile file: 'script.groovy', text: 'class MyClass { def config() { println "Configuring MyClass" } }'
                     gv = load "script.groovy"
                 }
             }
