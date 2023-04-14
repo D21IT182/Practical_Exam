@@ -19,6 +19,7 @@ pipeline {
         stage('init'){
             steps{
                 script{
+                    sh 'touch script.groovy'
                     gv = load "script.groovy"
                 }
             }
